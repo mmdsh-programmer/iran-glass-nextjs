@@ -1,4 +1,10 @@
-import { useRef, useState, useCallback, useLayoutEffect } from "react";
+import {
+  useRef,
+  useState,
+  useCallback,
+  useLayoutEffect,
+  useEffect,
+} from "react";
 import ResizeObserver from "resize-observer-polyfill";
 import {
   useViewportScroll,
@@ -12,19 +18,16 @@ export default function SmoothScroll({ children }) {
   const viewportRef = useRef();
   const [height, setHeight] = useState(0);
 
-  const resizePageHeight = useCallback((entries) => {
-    for (let entry of entries) {
-      setHeight(entry.contentRect.height);
+  const ro = new ResizeObserver((elements) => {
+    for (let elem of elements) {
+      const crx = elem.contentRect;
+      setHeight(crx.height);
     }
-  }, []);
+  });
 
-  useLayoutEffect(() => {
-    const resizeObserver = new ResizeObserver((entries) =>
-      resizePageHeight(entries)
-    );
-    viewportRef && resizeObserver.observe(viewportRef.current);
-    return () => resizeObserver.disconnect();
-  }, [viewportRef, resizePageHeight]);
+  useEffect(() => {
+    ro.observe(viewportRef.current);
+  });
 
   const { scrollY } = useViewportScroll(); // measures how many pixels user has scrolled vertically
   // as scrollY changes between 0px and the scrollable height, create a negative scroll value...
