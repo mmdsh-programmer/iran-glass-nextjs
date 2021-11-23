@@ -5,13 +5,9 @@ import { SmoothScroll } from "components/SmoothScroll";
 
 function MyApp({ Component, pageProps, router }) {
   return (
-    <SmoothScroll>
-      <Layout>
-        <AnimatePresence exitBeforeEnter initial={true}>
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
-      </Layout>
-    </SmoothScroll>
+    <Layout>
+      <Component {...pageProps} key={router.route} />
+    </Layout>
   );
 }
 
