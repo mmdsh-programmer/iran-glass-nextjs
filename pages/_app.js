@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <SmoothScroll>
       <Layout>
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence exitBeforeEnter initial={true}>
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       </Layout>
