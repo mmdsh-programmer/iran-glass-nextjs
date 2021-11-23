@@ -1,0 +1,52 @@
+import { useRef, useState, useCallback, useLayoutEffect } from "react";
+import ResizeObserver from "resize-observer-polyfill";
+import {
+  useViewportScroll,
+  useTransform,
+  useSpring,
+  motion,
+} from "framer-motion";
+import styles from "./SmoothScroll.module.css";
+
+export default function SmoothScroll({ children }) {
+  const viewportRef = useRef();
+  const [height, setHeight] = useState(0);
+
+  const resizePageHeight = useCallback((entries) => {
+    for (let entry of entries) {
+      setHeight(entry.contentRect.height);
+    }
+  }, []);
+
+  useLayoutEffect(() => {
+    const resizeObserver = new ResizeObserver((entries) =>
+      resizePageHeight(entries)
+    );
+    viewportRef && resizeObserver.observe(viewportRef.current);
+    return () => resizeObserver.disconnect();
+  }, [viewportRef, resizePageHeight]);
+
+  const { scrollY } = useViewportScroll(); // measures how many pixels user has scrolled vertically
+  // as scrollY changes between 0px and the scrollable height, create a negative scroll value...
+  // ... based on current scroll position to translateY the document in a natural way
+  const transform = useTransform(scrollY, [0, height], [0, -height]);
+  const physics = { damping: 20, mass: 1, stiffness: 55 };
+  const spring = useSpring(transform, physics);
+
+  return (
+    <>
+      <motion.div
+        className={`${styles["viewport"]} scroll-container`}
+        ref={viewportRef}
+        style={{ y: spring }}
+      >
+        {children}
+      </motion.div>
+      <div
+        style={{
+          height: height,
+        }}
+      />
+    </>
+  );
+}
