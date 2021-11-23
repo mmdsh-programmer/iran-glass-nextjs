@@ -301,10 +301,10 @@ export default function Home() {
       </Head>
 
       <motion.main
-        initial={{ opacity: 0, top: 500 }}
-        animate={{ opacity: 1, top: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 1, ease: "linear" }}
+        transition={{ duration: 1, ease: "easeInOut" }}
         className={styles["main-body"]}
       >
         <section className={styles["hero"]} ref={heroRef}>
