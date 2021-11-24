@@ -4,14 +4,13 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { MoreButton } from "components/MoreButton";
 import { gsap, Power4, Power2 } from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-import CSSRulePlugin from "gsap/dist/CSSRulePlugin";
 import useWindowSize from "src/hooks/useWindowSize";
 import styles from "styles/Home.module.css";
 
 export default function Home() {
-  gsap.registerPlugin(ScrollTrigger, CSSRulePlugin);
+  gsap.registerPlugin(ScrollTrigger);
   const { width } = useWindowSize();
 
   //refs
