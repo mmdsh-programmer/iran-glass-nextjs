@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -61,12 +61,15 @@ export default function Header() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img
-                    src="/images/social-icons/instagram.svg"
-                    alt="instagram"
-                    title="instagram"
-                    className={styles["instagram"]}
-                  />
+                  <div className={styles["instagram"]}>
+                    <Image
+                      src="/images/social-icons/instagram.svg"
+                      alt="instagram"
+                      title="instagram"
+                      width="100%"
+                      height="100%"
+                    />
+                  </div>
                 </a>
               </li>
             </ul>

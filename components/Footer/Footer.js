@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import classNames from "classnames";
 import styles from "./Footer.module.css";
 
@@ -27,12 +27,16 @@ export default function Footer(props) {
               target="_blank"
               rel="noreferrer"
             >
-              <img
-                src="/images/home/instagram-sketched.svg"
-                alt="instagram"
-                title="instagram"
-                className={styles["instagram-icon"]}
-              />
+              <span className={styles["instagram-icon"]}>
+                <Image
+                  src="/images/home/instagram-sketched.svg"
+                  alt="instagram"
+                  title="instagram"
+                  width="100%"
+                  height="100%"
+                  objectFit="contain"
+                />
+              </span>
               Instagram
             </a>
           </p>
@@ -120,12 +124,15 @@ export default function Footer(props) {
                   rel="noreferrer"
                   className={`${styles["menu-link"]} ${styles["instagram"]}`}
                 >
-                  <img
-                    className={styles["instagram-icon"]}
-                    src="/images/social-icons/instagram.svg"
-                    alt="instagram"
-                    title="instagram"
-                  />
+                  <span className={styles["instagram-icon"]}>
+                    <Image
+                      src="/images/social-icons/instagram.svg"
+                      alt="instagram"
+                      title="instagram"
+                      width="100%"
+                      height="100%"
+                    />
+                  </span>
                   <span className={styles["instagram-text"]}>Instagram</span>
                 </a>
               </li>

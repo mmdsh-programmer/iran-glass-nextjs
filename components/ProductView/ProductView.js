@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Image from "next/image";
 import styles from "./ProductView.module.css";
 
 export default function ProductView() {
@@ -11,9 +11,11 @@ export default function ProductView() {
             <h2 className={styles["product-title"]}>Classic Mirror</h2>
           </header>
           <a href="#" className={styles["close-button"]}>
-            <img
+            <Image
               src="/images/product-view/close-button.svg"
               alt="close button"
+              width="100%"
+              height="100%"
             />
           </a>
         </div>
@@ -56,20 +58,28 @@ export default function ProductView() {
 
           <div className={`row ${styles["product-navigations"]}`}>
             <button className={styles["navigator"]}>
-              <img
-                src="/images/product-view/left-arrow.svg"
-                alt="prev"
-                className={`${styles["left"]} ${styles["navigator-icon"]}`}
-              />
+              <span className={`${styles["left"]} ${styles["navigator-icon"]}`}>
+                <Image
+                  src="/images/product-view/left-arrow.svg"
+                  alt="prev"
+                  width="100%"
+                  height="100%"
+                />
+              </span>
               <span className={styles["navigator-text"]}>PREV PRODUCT</span>
             </button>
             <button className={styles["navigator"]}>
               <span className={styles["navigator-text"]}>NEXT PRODUCT</span>
-              <img
-                src="/images/product-view/right-arrow.svg"
-                alt="next"
+              <span
                 className={`${styles["right"]} ${styles["navigator-icon"]}`}
-              />
+              >
+                <Image
+                  src="/images/product-view/right-arrow.svg"
+                  alt="next"
+                  width="100%"
+                  height="100%"
+                />
+              </span>
             </button>
           </div>
         </div>
