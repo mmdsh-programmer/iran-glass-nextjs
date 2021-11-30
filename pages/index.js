@@ -290,7 +290,7 @@ export default function Home() {
 
     //run reaveal section after entering the viewport
     revealSection();
-  });
+  }, []);
   return (
     <>
       <Head>

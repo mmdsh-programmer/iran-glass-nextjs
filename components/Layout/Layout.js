@@ -9,15 +9,17 @@ export default function Layout({ children }) {
   const { pathname } = useRouter();
   return (
     <>
-      <Header />
-      <AnimatePresence exitBeforeEnter initial={true}>
-        {children}
-      </AnimatePresence>
-      {pathname === "/" ? (
-        <Footer classes="home-footer grey-shadow-top" />
-      ) : (
-        <Footer />
-      )}
+      <SmoothScroll>
+        <Header />
+        <AnimatePresence exitBeforeEnter initial={true}>
+          {children}
+        </AnimatePresence>
+        {pathname === "/" ? (
+          <Footer classes="home-footer grey-shadow-top" />
+        ) : (
+          <Footer />
+        )}
+      </SmoothScroll>
     </>
   );
 }
