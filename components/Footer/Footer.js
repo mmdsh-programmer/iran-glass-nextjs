@@ -42,7 +42,7 @@ export default function Footer(props) {
         },
       },
     });
-  });
+  }, []);
 
   return (
     <footer className={customFooter} ref={footerRef}>
