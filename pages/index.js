@@ -351,10 +351,10 @@ export default function Home() {
               </span>
             </h1>
             <div className={styles["hero-subtitle-container"]}>
-              <h3 className={styles["hero-subtitle"]} ref={subTitleRef}>
+              <h2 className={styles["hero-subtitle"]} ref={subTitleRef}>
                 <span className="block">Decoration</span>
                 <span className="block">& Smart Mirors</span>
-              </h3>
+              </h2>
               <img
                 className={styles["scroll-down"]}
                 src="/images/home/scroll.svg"
