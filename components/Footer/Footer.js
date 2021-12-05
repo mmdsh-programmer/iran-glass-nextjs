@@ -108,9 +108,9 @@ export default function Footer(props) {
 
         <div className="row wrap footer-info">
           <div className={styles["col-3"]}>
-            <h6 className={styles["footer-info-title"]}>
+            <h4 className={styles["footer-info-title"]}>
               Get in touch with us
-            </h6>
+            </h4>
             <ul className={styles["footer-info-menu"]}>
               <li className={styles["menu-item"]}>
                 <address className={styles["footer-info-address"]}>
