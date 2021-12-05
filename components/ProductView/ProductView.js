@@ -85,11 +85,14 @@ export default function ProductView() {
         </div>
 
         <div className={`row ${styles["product-images"]}`}>
-          <img src="/images/product-view/product-image.png" alt="product 1" />
+          <img src="/images/product-view/product-image.avif" alt="product 1" />
 
-          <img src="/images/product-view/product-image-2.png" alt="product 2" />
+          <img
+            src="/images/product-view/product-image-2.avif"
+            alt="product 2"
+          />
 
-          <img src="/images/product-view/product-image.png" alt="product 1" />
+          <img src="/images/product-view/product-image.avif" alt="product 1" />
         </div>
       </div>
     </section>

@@ -35,7 +35,7 @@ export default function CategoryDetails() {
           <div className={styles["background"]}>
             <img
               className={styles["background-image"]}
-              src="/images/category/hero-image.png"
+              src="/images/category/hero-image.avif"
               alt="hero"
             />
           </div>
@@ -112,7 +112,7 @@ export default function CategoryDetails() {
               <div className={styles["catalogue-data-image"]}>
                 <img
                   className={styles["image"]}
-                  src="/images/category/product-image.png"
+                  src="/images/category/product-image.avif"
                   alt="product"
                   title="product image"
                 />
@@ -135,44 +135,44 @@ export default function CategoryDetails() {
             className={`container row wrap align-center ${styles["gallery-container"]}`}
           >
             <div className={styles["image-holder"]}>
-              <img src="/images/home/image-2.png" alt="gallery-item-1" />
+              <img src="/images/home/image-2.avif" alt="gallery-item-1" />
             </div>
             <div className={styles["image-holder"]}>
-              <img src="/images/home/quote-image.png" alt="gallery-item-2" />
+              <img src="/images/home/quote-image.avif" alt="gallery-item-2" />
             </div>
             <div className={styles["image-holder"]}>
-              <img src="/images/home/work-1.jpg" alt="gallery-item-3" />
+              <img src="/images/home/work-1.avif" alt="gallery-item-3" />
             </div>
             <div className={styles["image-holder"]}>
-              <img src="/images/home/work-2.jpg" alt="gallery-item-4" />
+              <img src="/images/home/work-2.avif" alt="gallery-item-4" />
             </div>
             <div className={styles["image-holder"]}>
               <img
-                src="/images/category/gallery-image-4.png"
+                src="/images/category/gallery-image-4.avif"
                 alt="gallery-item-5"
               />
             </div>
             <div className={styles["image-holder"]}>
               <img
-                src="/images/category/gallery-image-2.png"
+                src="/images/category/gallery-image-2.avif"
                 alt="gallery-item-6"
               />
             </div>
             <div className={styles["image-holder"]}>
               <img
-                src="/images/category/product-image.png"
+                src="/images/category/product-image.avif"
                 alt="gallery-item-7"
               />
             </div>
             <div className={styles["image-holder"]}>
               <img
-                src="/images/category/gallery-image-1.png"
+                src="/images/category/gallery-image-1.avif"
                 alt="gallery-item-8"
               />
             </div>
             <div className={styles["image-holder"]}>
               <img
-                src="/images/category/gallery-image-3.png"
+                src="/images/category/gallery-image-3.avif"
                 alt="gallery-item-9"
               />
             </div>

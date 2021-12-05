@@ -370,7 +370,7 @@ export default function Home() {
               <img
                 alt="Iran Glass"
                 title="Iran Glass"
-                src="/images/home/image-1.png"
+                src="/images/home/image-1.avif"
                 className="reveal-image"
               />
             </div>
@@ -380,7 +380,7 @@ export default function Home() {
             >
               <div className={`${styles["reveal-cover"]} reveal-cover`}></div>
               <img
-                src="/images/home/image-2.png"
+                src="/images/home/image-2.avif"
                 alt="hero"
                 title="Iran Glass"
                 className="reveal-image"
@@ -433,7 +433,7 @@ export default function Home() {
                 <image
                   width="597"
                   height="860"
-                  xlinkHref="/images/home/quote-image.png"
+                  xlinkHref="/images/home/quote-image.avif"
                 />
               </pattern>
             </defs>
@@ -516,7 +516,7 @@ export default function Home() {
                         <div className="reveal-cover"></div>
                         <img
                           className={`${styles["item-image"]} reveal-image`}
-                          src="/images/home/work-1.jpg"
+                          src="/images/home/work-1.avif"
                           alt="work 1"
                         />
                       </div>
@@ -559,7 +559,7 @@ export default function Home() {
                         <div className="reveal-cover"></div>
                         <img
                           className={`${styles["item-image"]} reveal-image`}
-                          src="/images/home/work-2.jpg"
+                          src="/images/home/work-2.avif"
                           alt="work 2"
                         />
                       </div>
