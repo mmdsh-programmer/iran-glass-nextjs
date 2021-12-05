@@ -1,13 +1,28 @@
 import "../styles/globals.css";
-import { Layout } from "components/Layout";
+import { useRouter } from "next/router";
 import { AnimatePresence } from "framer-motion";
-import { SmoothScroll } from "components/SmoothScroll";
+import dynamic from "next/dynamic";
+
+const Header = dynamic(() => import("components/Header"));
+const Footer = dynamic(() => import("components/Footer"), { ssr: false });
+const SmoothScroll = dynamic(() => import("components/SmoothScroll"), {
+  ssr: false,
+});
 
 function MyApp({ Component, pageProps, router }) {
+  const { pathname } = useRouter();
   return (
-    <Layout>
-      <Component {...pageProps} key={router.route} />
-    </Layout>
+    <SmoothScroll>
+      <Header />
+      <AnimatePresence exitBeforeEnter initial={true}>
+        <Component {...pageProps} key={router.route} />
+      </AnimatePresence>
+      {pathname === "/" ? (
+        <Footer classes="home-footer grey-shadow-top" />
+      ) : (
+        <Footer />
+      )}
+    </SmoothScroll>
   );
 }
 
