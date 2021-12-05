@@ -153,7 +153,7 @@ export default function Footer(props) {
             </ul>
           </div>
           <div className={styles["col-3"]}>
-            <h6 className={styles["footer-info-title"]}>Products</h6>
+            <h4 className={styles["footer-info-title"]}>Products</h4>
             <ul className={styles["footer-info-menu"]}>
               <li className={styles["menu-item"]}>
                 <Link href="/" scroll={false}>
@@ -173,7 +173,7 @@ export default function Footer(props) {
             </ul>
           </div>
           <div className={styles["col-3"]}>
-            <h6 className={styles["footer-info-title"]}>Socials</h6>
+            <h4 className={styles["footer-info-title"]}>Socials</h4>
             <ul className={styles["footer-info-menu"]}>
               <li className={styles["menu-item"]}>
                 <a
