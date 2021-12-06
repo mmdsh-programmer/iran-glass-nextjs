@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import dynamic from "next/dynamic";
 import Home from "./index";
 import CategoryDetails from "./category-details";
+import NotFound from "./404";
 
 const Header = dynamic(() => import("components/Header"));
 const Footer = dynamic(() => import("components/Footer"), { ssr: false });
