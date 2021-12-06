@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import { useRouter } from "next/router";
-import { AnimatePresence } from "framer-motion";
+import { SwitchTransition, Transition } from "react-transition-group";
+import gsap from "gsap";
 import dynamic from "next/dynamic";
 
 const Header = dynamic(() => import("components/Header"));
@@ -11,18 +12,45 @@ const SmoothScroll = dynamic(() => import("components/SmoothScroll"), {
 
 function MyApp({ Component, pageProps, router }) {
   const { pathname } = useRouter();
+
+  const enter = (node) => {
+    gsap.from(node, {
+      duration: 1,
+      autoAlpha: 0,
+    });
+  };
+
+  const exit = (node) => {
+    gsap.to(node, {
+      duration: 1,
+      autoAlpha: 0,
+    });
+  };
+
   return (
-    <SmoothScroll>
-      <Header />
-      <AnimatePresence exitBeforeEnter initial={true}>
-        <Component {...pageProps} key={router.route} />
-      </AnimatePresence>
-      {pathname === "/" ? (
-        <Footer classes="home-footer grey-shadow-top" />
-      ) : (
-        <Footer />
-      )}
-    </SmoothScroll>
+    <SwitchTransition>
+      <Transition
+        key={router.pathname}
+        timeout={1000}
+        in={true}
+        onEnter={enter}
+        onExit={exit}
+        mountOnEnter={true}
+        unmountOnExit={true}
+      >
+        <SmoothScroll>
+          <Header />
+
+          <Component {...pageProps} key={router.route} />
+
+          {pathname === "/" ? (
+            <Footer classes="home-footer grey-shadow-top" />
+          ) : (
+            <Footer />
+          )}
+        </SmoothScroll>
+      </Transition>
+    </SwitchTransition>
   );
 }
 
