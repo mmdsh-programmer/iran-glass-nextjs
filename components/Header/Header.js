@@ -2,10 +2,17 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Header.module.css";
+import { motion } from "framer-motion";
 
 export default function Header() {
   return (
-    <header className={styles["main-header"]}>
+    <motion.header
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
+      className={styles["main-header"]}
+    >
       <div className={`container ${styles.container}`}>
         <div className="row">
           <a href="#" className={styles["header-menu-icon"]}>
@@ -76,6 +83,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

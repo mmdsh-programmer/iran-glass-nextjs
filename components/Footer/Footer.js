@@ -6,6 +6,7 @@ import styles from "./Footer.module.css";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import useWindowSize from "src/hooks/useWindowSize";
+import { motion } from "framer-motion";
 
 export default function Footer(props) {
   gsap.registerPlugin(ScrollTrigger);
@@ -27,8 +28,9 @@ export default function Footer(props) {
             "#masterTextPath",
             {
               attr: {
-                startOffset: gsap.getProperty("#masterTextPath", "startOffset")
-                  .animVal.value,
+                startOffset:
+                  gsap.getProperty("#masterTextPath", "startOffset")?.animVal
+                    ?.value || 0,
               },
             },
             {
@@ -45,7 +47,14 @@ export default function Footer(props) {
   }, []);
 
   return (
-    <footer className={customFooter} ref={footerRef}>
+    <motion.footer
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
+      className={customFooter}
+      ref={footerRef}
+    >
       <svg
         id={styles["textPath"]}
         viewBox={`0 0 ${
@@ -238,6 +247,6 @@ export default function Footer(props) {
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }

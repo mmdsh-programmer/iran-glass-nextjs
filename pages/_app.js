@@ -1,3 +1,4 @@
+import React from "react";
 import "../styles/globals.css";
 import { useRouter } from "next/router";
 import { AnimatePresence } from "framer-motion";
@@ -16,15 +17,17 @@ function MyApp({ Component, pageProps, router }) {
   const { pathname } = useRouter();
   return (
     <SmoothScroll>
-      <Header />
       <AnimatePresence exitBeforeEnter initial={true}>
-        <Component {...pageProps} key={router.route} />
+        <React.Fragment key={router.route}>
+          <Header />
+          <Component {...pageProps} />
+          {pathname === "/" ? (
+            <Footer classes="home-footer grey-shadow-top" />
+          ) : (
+            <Footer />
+          )}
+        </React.Fragment>
       </AnimatePresence>
-      {pathname === "/" ? (
-        <Footer classes="home-footer grey-shadow-top" />
-      ) : (
-        <Footer />
-      )}
     </SmoothScroll>
   );
 }
