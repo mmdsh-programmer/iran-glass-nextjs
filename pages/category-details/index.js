@@ -9,7 +9,7 @@ export default function CategoryDetails() {
   return (
     <>
       <Head>
-        <title>Iran Glass</title>
+        <title>Iran Glass | Categories</title>
         <meta name="description" content="Iran Glass" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
