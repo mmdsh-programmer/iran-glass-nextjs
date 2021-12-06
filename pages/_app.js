@@ -2,6 +2,8 @@ import "../styles/globals.css";
 import { useRouter } from "next/router";
 import { AnimatePresence } from "framer-motion";
 import dynamic from "next/dynamic";
+import Home from "./index";
+import CategoryDetails from "./category-details";
 
 const Header = dynamic(() => import("components/Header"));
 const Footer = dynamic(() => import("components/Footer"), { ssr: false });
