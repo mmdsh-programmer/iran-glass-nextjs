@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import { useRouter } from "next/router";
+import { useRouter, Router } from "next/router";
 import { SwitchTransition, Transition } from "react-transition-group";
 import gsap from "gsap";
 import dynamic from "next/dynamic";
@@ -12,6 +12,19 @@ const SmoothScroll = dynamic(() => import("components/SmoothScroll"), {
 
 function MyApp({ Component, pageProps, router }) {
   const { pathname } = useRouter();
+
+  const routeChange = () => {
+    const tempFix = () => {
+      const allStyleElems = document.querySelectorAll('style[media="x"]');
+      allStyleElems.forEach((elem) => {
+        elem.removeAttribute("media");
+      });
+    };
+    tempFix();
+  };
+
+  Router.events.on("routeChangeComplete", routeChange);
+  Router.events.on("routeChangeStart", routeChange);
 
   const enter = (node) => {
     gsap.from(node, {
