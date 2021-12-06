@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps, router }) {
       <Transition
         key={router.pathname}
         timeout={1000}
-        in={true}
+        in={false}
         onEnter={enter}
         onExit={exit}
         mountOnEnter={true}
