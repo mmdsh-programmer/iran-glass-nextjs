@@ -3,7 +3,6 @@ import React from "react";
 import Head from "next/head";
 import styles from "./CategoryDetails.module.css";
 import { MoreButton } from "components/MoreButton";
-import { motion } from "framer-motion";
 
 export default function CategoryDetails() {
   return (
@@ -14,13 +13,7 @@ export default function CategoryDetails() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <motion.main
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className={styles["category-body"]}
-      >
+      <main className={styles["category-body"]}>
         <section className={styles["hero"]}>
           <div className="container">
             <header className={styles["category-header"]}>
@@ -178,7 +171,7 @@ export default function CategoryDetails() {
             </div>
           </div>
         </section>
-      </motion.main>
+      </main>
     </>
   );
 }

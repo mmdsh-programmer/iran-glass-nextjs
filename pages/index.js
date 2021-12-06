@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 import { MoreButton } from "components/MoreButton";
 import { gsap, Power4, Power2 } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -323,13 +322,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <motion.main
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className={styles["main-body"]}
-      >
+      <main className={styles["main-body"]}>
         <section className={styles["hero"]} ref={heroRef}>
           <div className={styles["background"]}></div>
           <div className={`container grid ${styles["container"]}`}>
@@ -588,7 +581,7 @@ export default function Home() {
             </div>
           </React.Fragment>
         </section>
-      </motion.main>
+      </main>
     </>
   );
 }
