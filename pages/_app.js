@@ -3,6 +3,8 @@ import { useRouter, Router } from "next/router";
 import { SwitchTransition, Transition } from "react-transition-group";
 import gsap from "gsap";
 import dynamic from "next/dynamic";
+import "pages/category-details/CategoryDetails.module.css";
+import "styles/Home.module.css";
 
 const Header = dynamic(() => import("components/Header"));
 const Footer = dynamic(() => import("components/Footer"), { ssr: false });
