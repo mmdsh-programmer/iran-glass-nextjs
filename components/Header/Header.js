@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./Header.module.css";
 import { motion } from "framer-motion";
 
@@ -69,12 +68,10 @@ export default function Header() {
                   rel="noreferrer"
                 >
                   <div className={styles["instagram"]}>
-                    <Image
+                    <img
                       src="/images/social-icons/instagram.svg"
                       alt="instagram"
                       title="instagram"
-                      width="100%"
-                      height="100%"
                     />
                   </div>
                 </a>

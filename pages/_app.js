@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
 import "../styles/globals.css";
-import { useRouter, Router } from "next/router";
+import { useRouter } from "next/router";
 import { AnimatePresence } from "framer-motion";
 import dynamic from "next/dynamic";
 import Home from "./index";

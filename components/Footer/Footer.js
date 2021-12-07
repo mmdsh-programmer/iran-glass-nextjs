@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import classNames from "classnames";
 import styles from "./Footer.module.css";
 import { gsap } from "gsap";
@@ -95,13 +94,10 @@ export default function Footer(props) {
               rel="noreferrer"
             >
               <span className={styles["instagram-icon"]}>
-                <Image
+                <img
                   src="/images/home/instagram-sketched.svg"
                   alt="instagram"
                   title="instagram"
-                  width="100%"
-                  height="100%"
-                  objectFit="contain"
                 />
               </span>
               Instagram
@@ -192,12 +188,10 @@ export default function Footer(props) {
                   className={`${styles["menu-link"]} ${styles["instagram"]}`}
                 >
                   <span className={styles["instagram-icon"]}>
-                    <Image
+                    <img
                       src="/images/social-icons/instagram.svg"
                       alt="instagram"
                       title="instagram"
-                      width="100%"
-                      height="100%"
                     />
                   </span>
                   <span className={styles["instagram-text"]}>Instagram</span>
