@@ -72,6 +72,8 @@ export default function Header() {
                       src="/images/social-icons/instagram.svg"
                       alt="instagram"
                       title="instagram"
+                      width="100%"
+                      height="100%"
                     />
                   </div>
                 </a>

@@ -98,6 +98,8 @@ export default function Footer(props) {
                   src="/images/home/instagram-sketched.svg"
                   alt="instagram"
                   title="instagram"
+                  width="100%"
+                  height="100%"
                 />
               </span>
               Instagram
@@ -192,6 +194,8 @@ export default function Footer(props) {
                       src="/images/social-icons/instagram.svg"
                       alt="instagram"
                       title="instagram"
+                      width="100%"
+                      height="100%"
                     />
                   </span>
                   <span className={styles["instagram-text"]}>Instagram</span>
