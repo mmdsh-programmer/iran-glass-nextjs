@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { MoreButton } from "components/MoreButton";
 import { gsap, Power4, Power2 } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import MotionPathPlugin from "gsap/dist/MotionPathPlugin";
 import SplitType from "split-type";
 import useWindowSize from "src/hooks/useWindowSize";
