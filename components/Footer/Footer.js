@@ -4,7 +4,7 @@ import Image from "next/image";
 import classNames from "classnames";
 import styles from "./Footer.module.css";
 import { gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import useWindowSize from "src/hooks/useWindowSize";
 import { motion } from "framer-motion";
 

@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/globals.css";
-import { useRouter } from "next/router";
+import { useRouter, Router } from "next/router";
 import { AnimatePresence } from "framer-motion";
 import dynamic from "next/dynamic";
 import Home from "./index";
@@ -15,20 +15,19 @@ const SmoothScroll = dynamic(() => import("components/SmoothScroll"), {
 
 function MyApp({ Component, pageProps, router }) {
   const { pathname } = useRouter();
+
   return (
-    <SmoothScroll>
-      <AnimatePresence exitBeforeEnter initial={true}>
-        <React.Fragment key={router.route}>
-          <Header />
-          <Component {...pageProps} />
-          {pathname === "/" ? (
-            <Footer classes="home-footer grey-shadow-top" />
-          ) : (
-            <Footer />
-          )}
-        </React.Fragment>
-      </AnimatePresence>
-    </SmoothScroll>
+    <AnimatePresence exitBeforeEnter initial={true}>
+      <SmoothScroll key={router.route}>
+        <Header />
+        <Component {...pageProps} />
+        {pathname === "/" ? (
+          <Footer classes="home-footer grey-shadow-top" />
+        ) : (
+          <Footer />
+        )}
+      </SmoothScroll>
+    </AnimatePresence>
   );
 }
 

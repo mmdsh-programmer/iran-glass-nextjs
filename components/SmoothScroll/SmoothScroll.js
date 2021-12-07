@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect } from "react";
-import ResizeObserver from "resize-observer-polyfill";
 import {
   useViewportScroll,
   useTransform,
@@ -21,7 +20,7 @@ export default function SmoothScroll({ children }) {
 
   useEffect(() => {
     ro.observe(viewportRef.current);
-  });
+  }, []);
 
   const { scrollY } = useViewportScroll(); // measures how many pixels user has scrolled vertically
   // as scrollY changes between 0px and the scrollable height, create a negative scroll value...
