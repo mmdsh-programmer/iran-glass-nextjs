@@ -17,19 +17,17 @@ function MyApp({ Component, pageProps, router }) {
   const { pathname } = useRouter();
 
   return (
-    <SmoothScroll>
-      <AnimatePresence exitBeforeEnter initial={true}>
-        <React.Fragment key={router.route}>
-          <Header />
-          <Component {...pageProps} />
-          {pathname === "/" ? (
-            <Footer classes="home-footer grey-shadow-top" />
-          ) : (
-            <Footer />
-          )}
-        </React.Fragment>
-      </AnimatePresence>
-    </SmoothScroll>
+    <AnimatePresence exitBeforeEnter initial={true}>
+      <SmoothScroll key={router.route}>
+        <Header />
+        <Component {...pageProps} />
+        {pathname === "/" ? (
+          <Footer classes="home-footer grey-shadow-top" />
+        ) : (
+          <Footer />
+        )}
+      </SmoothScroll>
+    </AnimatePresence>
   );
 }
 
