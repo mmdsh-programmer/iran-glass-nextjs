@@ -278,3 +278,9 @@
     font-size: 30px;
   }
 }
+
+@media screen and (min-width: 576px) {
+  .main-footer [class*="col-"]:last-child {
+    border-bottom: none !important;
+  }
+}
