@@ -303,6 +303,24 @@ body {
   box-shadow: 0 -10px var(--grey-darken-3);
 }
 
+.ml-0 {
+  margin-left: 0;
+}
+
+.mr-0 {
+  margin-right: 0;
+}
+
+@media (max-width: 1700px) {
+  .ml-lg-20 {
+    margin-left: 20px;
+  }
+
+  .mr-lg-20 {
+    margin-right: 20px;
+  }
+}
+
 @media screen and (max-width: 575px) {
   .d-mobile-none {
     display: none;

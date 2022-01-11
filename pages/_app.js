@@ -21,9 +21,13 @@ function MyApp({ Component, pageProps, router }) {
         <Header />
         <Component {...pageProps} />
         {pathname === "/" ? (
-          <Footer classes="home-footer grey-shadow-top" />
+          <Footer
+            classes="home-footer grey-shadow-top"
+            curvedTextColor={"#bdbdbd"}
+            borderColor={"#616161"}
+          />
         ) : (
-          <Footer />
+          <Footer curvedTextColor={"#757575"} borderColor={"#ffffff"} />
         )}
       </SmoothScroll>
     </AnimatePresence>

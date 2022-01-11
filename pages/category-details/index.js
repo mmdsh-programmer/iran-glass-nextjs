@@ -50,7 +50,9 @@ export default function CategoryDetails() {
 
         <section className={styles["catalogue"]}>
           <div className={`container ${styles["container"]}`}>
-            <div className={`row wrap ${styles["catalogue-counter"]}`}>
+            <div
+              className={`row ml-lg-20 mr-lg-20 wrap ${styles["catalogue-counter"]}`}
+            >
               <div
                 className={`col ${styles["col-4"]} row justify-start align-start`}
               >
@@ -87,7 +89,9 @@ export default function CategoryDetails() {
             </div>
 
             <div className={styles["catalogue-data"]}>
-              <header className={styles["catalogue-data-title"]}>
+              <header
+                className={`${styles["catalogue-data-title"]} ml-lg-20 mr-lg-20`}
+              >
                 <h3 className={styles["title"]}>Wall mirror</h3>
               </header>
 
@@ -107,15 +111,15 @@ export default function CategoryDetails() {
                 <MoreButton href="/" className={styles["view-products"]}>
                   View products
                 </MoreButton>
-              </div>
 
-              <div className={styles["catalogue-data-image"]}>
-                <img
-                  className={styles["image"]}
-                  src="/images/category/product-image.avif"
-                  alt="product"
-                  title="product image"
-                />
+                <div className={styles["catalogue-data-image"]}>
+                  <img
+                    className={styles["image"]}
+                    src="/images/category/product-image.avif"
+                    alt="product"
+                    title="product image"
+                  />
+                </div>
               </div>
             </div>
           </div>

@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 export default function Footer(props) {
   gsap.registerPlugin(ScrollTrigger);
-  const { classes } = props;
+  const { classes, curvedTextColor, borderColor } = props;
   const customFooter = classNames(styles["main-footer"], classes);
   const footerRef = useRef(null);
   const { width } = useWindowSize();
@@ -68,7 +68,7 @@ export default function Footer(props) {
         <text
           id="mainText"
           className={styles["master-text-path"]}
-          fill="#bdbdbd"
+          fill={curvedTextColor}
         >
           <textPath id="masterTextPath" xlinkHref="#master" startOffset="0">
             Interested in our products? get in touch for more information
@@ -179,7 +179,10 @@ export default function Footer(props) {
               </li>
             </ul>
           </div>
-          <div className={styles["col-3"]}>
+          <div
+            className={styles["col-3"]}
+            style={{ borderBottom: `1px solid ${borderColor}` }}
+          >
             <h4 className={styles["footer-info-title"]}>Socials</h4>
             <ul className={styles["footer-info-menu"]}>
               <li className={styles["menu-item"]}>
