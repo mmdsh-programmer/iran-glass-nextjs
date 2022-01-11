@@ -244,13 +244,13 @@
   order: 9;
 }
 
-@media (max-width: 460px) {
+@media (max-width: 460px), (max-width: 1024px) {
   .category-body .category-header {
     transform: translateY(147px);
   }
 
   .category-body .category-header > .header-title {
-    font-size: 20vw;
+    font-size: min(20vw, 154px);
   }
 
   .category-body .category-header > .header-subtitle {
