@@ -192,7 +192,6 @@ table {
 }
 
 body {
-  background-color: #bebebe;
   -webkit-text-size-adjust: 100%;
   background-color: #a7a8aa;
   height: 100vh;
@@ -309,6 +308,10 @@ body {
 
 .mr-0 {
   margin-right: 0;
+}
+
+.p-relative {
+  position: relative;
 }
 
 @media (max-width: 1700px) {
