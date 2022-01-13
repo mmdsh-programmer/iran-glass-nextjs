@@ -74,6 +74,16 @@
   height: 258px;
 }
 
+.catalogue-counter .mask-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(1);
+  background-color: #a7a8aa;
+}
+
 .catalogue .catalogue-counter .counter-number {
   font-family: SaolDisplay;
   font-size: clamp(74px, 6.46vw, 124px);
@@ -86,7 +96,7 @@
   width: 1px;
   height: 53px;
   background-color: var(--white);
-  transform: rotate(25deg);
+  transform: rotate(25deg) scaleY(0);
 }
 
 .catalogue .catalogue-counter .counter-separator {
