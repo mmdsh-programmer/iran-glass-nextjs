@@ -166,6 +166,7 @@ table {
   :root {
     scroll-behavior: smooth;
     --white: #fff;
+    --black: #000000;
     --hero-text: #263238;
     --grey-lighten-3: #eeeeee;
     --grey-darken-1: #757575;
@@ -308,6 +309,14 @@ body {
 
 .mr-0 {
   margin-right: 0;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
 }
 
 .p-relative {

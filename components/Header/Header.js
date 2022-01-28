@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect, useMemo } from "react";
 import Link from "next/link";
 import styles from "./Header.module.css";
 import { motion } from "framer-motion";
+import { useRouter, Router } from "next/router";
 
 export default function Header() {
+  const { pathname } = useRouter();
+
+  const themeColor = useMemo(() => {
+    switch (pathname) {
+      case "/about":
+      case "/contact":
+        return false;
+      default:
+        return true;
+    }
+  }, [pathname]);
+
   return (
     <motion.header
       initial={{ opacity: 0 }}
@@ -12,38 +25,71 @@ export default function Header() {
       transition={{ duration: 1, ease: "easeInOut" }}
       className={styles["main-header"]}
     >
-      <div className={`container ${styles.container}`}>
+      <div
+        className={`container ${styles.container}`}
+        style={!themeColor ? { borderBottom: "1px solid #000000" } : {}}
+      >
         <div className="row">
           <a href="#" className={styles["header-menu-icon"]}>
-            <span></span>
-            <span></span>
-            <span></span>
+            <span className={!themeColor ? styles["dark"] : {}}></span>
+            <span className={!themeColor ? styles["dark"] : {}}></span>
+            <span className={!themeColor ? styles["dark"] : {}}></span>
           </a>
 
           <Link href="/">
-            <a className={styles["header-logo"]}>IGT</a>
+            <a
+              className={`${styles["header-logo"]} ${
+                !themeColor ? styles["dark"] : {}
+              }`}
+            >
+              IGT
+            </a>
           </Link>
 
           <nav className={styles["header-navbar"]}>
             <ul className={styles["header-menu"]}>
               <li className={styles["menu-item"]}>
                 <Link href="/">
-                  <a className={styles["menu-link"]}>Home</a>
+                  <a
+                    className={`${styles["menu-link"]} ${
+                      !themeColor ? styles["dark"] : {}
+                    }`}
+                  >
+                    Home
+                  </a>
                 </Link>
               </li>
               <li className={styles["menu-item"]}>
                 <Link href="/category-details">
-                  <a className={styles["menu-link"]}>Products</a>
+                  <a
+                    className={`${styles["menu-link"]} ${
+                      !themeColor ? styles["dark"] : {}
+                    }`}
+                  >
+                    Products
+                  </a>
                 </Link>
               </li>
               <li className={styles["menu-item"]}>
-                <Link href="/404">
-                  <a className={styles["menu-link"]}>About</a>
+                <Link href="/about">
+                  <a
+                    className={`${styles["menu-link"]} ${
+                      !themeColor ? styles["dark"] : {}
+                    }`}
+                  >
+                    About
+                  </a>
                 </Link>
               </li>
               <li className={styles["menu-item"]}>
-                <Link href="/">
-                  <a className={styles["menu-link"]}>Contact</a>
+                <Link href="/contact">
+                  <a
+                    className={`${styles["menu-link"]} ${
+                      !themeColor ? styles["dark"] : {}
+                    }`}
+                  >
+                    Contact
+                  </a>
                 </Link>
               </li>
             </ul>
@@ -54,7 +100,9 @@ export default function Header() {
               <li className={styles["menu-item"]}>
                 <Link href="/">
                   <a
-                    className={`${styles["menu-link"]} ${styles["lang-switch"]}`}
+                    className={`${styles["menu-link"]} ${
+                      styles["lang-switch"]
+                    } ${!themeColor ? styles["dark"] : {}}`}
                   >
                     فارسی
                   </a>
@@ -69,7 +117,11 @@ export default function Header() {
                 >
                   <div className={styles["instagram"]}>
                     <img
-                      src="/images/social-icons/instagram.svg"
+                      src={
+                        themeColor
+                          ? "/images/social-icons/instagram.svg"
+                          : "/images/social-icons/dark-instagram.svg"
+                      }
                       alt="instagram"
                       title="instagram"
                       width="100%"

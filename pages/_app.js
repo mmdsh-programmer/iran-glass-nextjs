@@ -1,9 +1,11 @@
 import "../styles/globals.css";
-import { useRouter } from "next/router";
+import { useRouter, Router } from "next/router";
 import { AnimatePresence } from "framer-motion";
 import dynamic from "next/dynamic";
 import Home from "./index";
 import CategoryDetails from "./category-details";
+import ProductList from "./product-list";
+import About from "./about";
 import NotFound from "./404";
 
 const Header = dynamic(() => import("components/Header"));

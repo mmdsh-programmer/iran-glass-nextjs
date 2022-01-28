@@ -11,6 +11,11 @@
   color: var(--white);
 }
 
+.main-header a.dark {
+  text-decoration: none;
+  color: var(--black);
+}
+
 .container {
   border-bottom: 1px solid var(--white);
 }
@@ -30,6 +35,10 @@
   height: 2px;
   background-color: var(--white);
   color: var(--white);
+}
+
+.header-menu-icon span.dark{
+  background-color: var(--black);
 }
 
 .header-logo {
