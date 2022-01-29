@@ -7,6 +7,7 @@ import CategoryDetails from "./category-details";
 import ProductList from "./product-list";
 import About from "./about";
 import NotFound from "./404";
+import { useEffect, useMemo } from "react";
 
 const Header = dynamic(() => import("components/Header"));
 const Footer = dynamic(() => import("components/Footer"), { ssr: false });
@@ -17,20 +18,29 @@ const SmoothScroll = dynamic(() => import("components/SmoothScroll"), {
 function MyApp({ Component, pageProps, router }) {
   const { pathname } = useRouter();
 
-  return (
-    <AnimatePresence exitBeforeEnter initial={true}>
-      <SmoothScroll key={router.route}>
-        <Header />
-        <Component {...pageProps} />
-        {pathname === "/" ? (
+  const footerStyle = useMemo(() => {
+    switch (pathname) {
+      case "/":
+        return (
           <Footer
             classes="home-footer grey-shadow-top"
             curvedTextColor={"#bdbdbd"}
             borderColor={"#616161"}
           />
-        ) : (
-          <Footer curvedTextColor={"#757575"} borderColor={"#ffffff"} />
-        )}
+        );
+      case "/contact":
+        return;
+      default:
+        return <Footer curvedTextColor={"#757575"} borderColor={"#ffffff"} />;
+    }
+  }, [pathname]);
+
+  return (
+    <AnimatePresence exitBeforeEnter initial={true}>
+      <SmoothScroll key={router.route}>
+        <Header />
+        <Component {...pageProps} />
+        {footerStyle}
       </SmoothScroll>
     </AnimatePresence>
   );
