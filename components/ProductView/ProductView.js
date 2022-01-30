@@ -133,11 +133,10 @@ export default function ProductView({ show, onClose }) {
           <Swiper
             slidesPerView={"auto"}
             spaceBetween={30}
-            pagination={true}
-            navigation={true}
             pagination={{
               clickable: true,
             }}
+            navigation={true}
             modules={[Pagination, Navigation]}
             className="product-view-slider"
           >
