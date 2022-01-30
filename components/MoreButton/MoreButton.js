@@ -5,7 +5,7 @@ import classNames from "classnames";
 import { gsap, Power3 } from "gsap";
 
 export default function MoreButton(props) {
-  const { children, className, ...rest } = props;
+  const { children, className, onClick, ...rest } = props;
   const childClassNames = classNames(
     className,
     "button-content",
@@ -53,9 +53,10 @@ export default function MoreButton(props) {
       onMouseMove={buttonEffect}
       onMouseLeave={buttonEffect}
       ref={buttonRef}
+      onClick={onClick}
     >
       <div className={`${styles["circle"]} circle`}></div>
-      <Link {...rest}>
+      <Link scroll={false} {...rest}>
         <a className={styles["hero-link"]}>{children}</a>
       </Link>
     </div>

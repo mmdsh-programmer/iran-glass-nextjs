@@ -6,8 +6,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
+import { motion } from "framer-motion";
 
-export default function ProductView() {
+export default function ProductView({ show, onClose }) {
   const handleNext = () => {
     const nextButton = document.querySelector(
       ".product-view-slider .swiper-button-next"
@@ -22,22 +23,41 @@ export default function ProductView() {
     prevButton.click();
   };
 
+  const closeOnEscapeKeyDown = (e) => {
+    if ((e.charCode || e.keyCode) === 27) {
+      onClose();
+    }
+  };
+
+  useEffect(() => {
+    document.body.addEventListener("keydown", closeOnEscapeKeyDown);
+    return function cleanup() {
+      document.body.removeEventListener("keydown", closeOnEscapeKeyDown);
+    };
+  }, []);
+
   return (
-    <section className={styles["product-view"]}>
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
+      className={`${styles["product-view"]}`}
+    >
       <div className={`container row flex-column`}>
         <div className={styles["container"]}>
           <div className="row align-center justify-space-between">
             <header className={styles["product-view-title"]}>
               <h2 className={styles["product-title"]}>Classic Mirror</h2>
             </header>
-            <a href="#" className={styles["close-button"]}>
+            <button className={styles["close-button"]} onClick={onClose}>
               <Image
                 src="/images/product-view/close-button.svg"
                 alt="close button"
                 width="100%"
                 height="100%"
               />
-            </a>
+            </button>
           </div>
         </div>
 
@@ -142,6 +162,6 @@ export default function ProductView() {
           </Swiper>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -217,12 +217,12 @@ export default function Footer(props) {
                 </Link>
               </li>
               <li className={styles["menu-item"]}>
-                <Link href="/" scroll={false}>
+                <Link href="/about" scroll={false}>
                   <a className={styles["menu-link"]}>About</a>
                 </Link>
               </li>
               <li className={styles["menu-item"]}>
-                <Link href="/" scroll={false}>
+                <Link href="/contact" scroll={false}>
                   <a className={styles["menu-link"]}>Contact</a>
                 </Link>
               </li>

@@ -226,7 +226,7 @@ export default function CategoryDetails() {
                   and with the aim of meeting the needs of customers
                 </p>
 
-                <MoreButton href="/" className={styles["view-products"]}>
+                <MoreButton href="/test" className={styles["view-products"]}>
                   View products
                 </MoreButton>
 

@@ -2,21 +2,8 @@ import React, { useEffect, useMemo } from "react";
 import Link from "next/link";
 import styles from "./Header.module.css";
 import { motion } from "framer-motion";
-import { useRouter, Router } from "next/router";
 
-export default function Header() {
-  const { pathname } = useRouter();
-
-  const themeColor = useMemo(() => {
-    switch (pathname) {
-      case "/about":
-      case "/contact":
-        return false;
-      default:
-        return true;
-    }
-  }, [pathname]);
-
+export default function Header({ themeColor }) {
   return (
     <motion.header
       initial={{ opacity: 0 }}
