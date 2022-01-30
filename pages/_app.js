@@ -6,6 +6,7 @@ import Home from "./index";
 import CategoryDetails from "./category-details";
 import ProductList from "./product-list";
 import About from "./about";
+import Contact from "./contact";
 import NotFound from "./404";
 import { ProductView } from "components/ProductView";
 import { useEffect, useMemo } from "react";
