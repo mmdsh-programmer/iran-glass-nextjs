@@ -88,12 +88,20 @@ export default function Contact() {
                   <dl className={styles["info-list"]}>
                     <dt>Telegram</dt>
                     <dd>
-                      <a href="https://t.me/glass_iran" target="_blank">
+                      <a
+                        href="https://t.me/glass_iran"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         @glass_iran
                       </a>
                     </dd>
                     <dd>
-                      <a href="https://t.me/09303032020" target="_blank">
+                      <a
+                        href="https://t.me/09303032020"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         0930 303 2020
                       </a>
                     </dd>
