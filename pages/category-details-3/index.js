@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useRef } from "react";
 import Head from "next/head";
+import Link from "next/link";
 import styles from "./CategoryDetails.module.css";
+import plStyles from "../product-list-1-1/ProductList.module.css";
 import { MoreButton } from "components/MoreButton";
 import { motion } from "framer-motion";
 import { gsap, Power4, Power2 } from "gsap";
@@ -125,7 +127,7 @@ export default function CategoryDetails() {
                 className={`${styles["header-title"]} main-title`}
                 ref={mainTitleRef}
               >
-                Decorative Mirror
+                Other Glass
               </h1>
               <p
                 className={`${styles["header-subtitle"]} header-subtitle`}
@@ -206,107 +208,94 @@ export default function CategoryDetails() {
               </div>
             </div>
 
-            <div className={styles["catalogue-data"]}>
-              <header
-                className={`${styles["catalogue-data-title"]} ml-lg-20 mr-lg-20`}
-              >
-                <h3 className={styles["title"]}>Wall Mirrors</h3>
-              </header>
-
-              <div className="row align-center">
-                <span className={`block ${styles["counter-separator"]}`}></span>
-                <span className={`block ${styles["counter-number"]}`}>
-                  48 products
-                </span>
-              </div>
-
-              <div className="row wrap align-center">
-                <p className={styles["catalogue-data-description"]}>
-                  Iran Glass Technology with more than 40 years of experience
-                  and with the aim of meeting the needs of customers
-                </p>
-
-                <MoreButton href="/product-list-1-1" className={styles["view-products"]}>
-                  View products
-                </MoreButton>
-
-                <div className={styles["catalogue-data-image"]}>
-                  <img
-                    className={styles["image"]}
-                    src="/images/category/product-image.avif"
-                    alt="product"
-                    title="product image"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className={styles["catalogue-data"]}>
-              <header
-                className={`${styles["catalogue-data-title"]} ml-lg-20 mr-lg-20`}
-              >
-                <h3 className={styles["title"]}>Table & Console Mirrors</h3>
-              </header>
-
-              <div className="row align-center">
-                <span className={`block ${styles["counter-separator"]}`}></span>
-                <span className={`block ${styles["counter-number"]}`}>
-                  48 products
-                </span>
-              </div>
-
-              <div className="row wrap align-center">
-                <p className={styles["catalogue-data-description"]}>
-                  Iran Glass Technology with more than 40 years of experience
-                  and with the aim of meeting the needs of customers
-                </p>
-
-                <MoreButton href="/product-list-1-2" className={styles["view-products"]}>
-                  View products
-                </MoreButton>
-
-                <div className={styles["catalogue-data-image"]}>
-                  <img
-                    className={styles["image"]}
-                    src="/images/category/product-image.avif"
-                    alt="product"
-                    title="product image"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className={styles["catalogue-data"]}>
-              <header
-                className={`${styles["catalogue-data-title"]} ml-lg-20 mr-lg-20`}
-              >
-                <h3 className={styles["title"]}>Full-length Mirror</h3>
-              </header>
-
-              <div className="row align-center">
-                <span className={`block ${styles["counter-separator"]}`}></span>
-                <span className={`block ${styles["counter-number"]}`}>
-                  48 products
-                </span>
-              </div>
-
-              <div className="row wrap align-center">
-                <p className={styles["catalogue-data-description"]}>
-                  Iran Glass Technology with more than 40 years of experience
-                  and with the aim of meeting the needs of customers
-                </p>
-
-                <MoreButton href="/product-list-1-3" className={styles["view-products"]}>
-                  View products
-                </MoreButton>
-
-                <div className={styles["catalogue-data-image"]}>
-                  <img
-                    className={styles["image"]}
-                    src="/images/category/product-image.avif"
-                    alt="product"
-                    title="product image"
-                  />
+            <div
+              className={plStyles["product-list"]}
+              style={{ marginBottom: "0px", marginTop: "300px" }}
+            >
+              <div className={`${plStyles["container"]} container`}>
+                <div
+                  className={`${plStyles["product-list-row"]} row wrap justify-center`}
+                >
+                  <Link href="/test">
+                    <article
+                      className={plStyles["product"]}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <figure className={plStyles["product-details"]}>
+                        <img
+                          src="/images/product-list/1.avif"
+                          className={plStyles["product-image"]}
+                          alt="product image"
+                        />
+                        <figcaption className={plStyles["product-caption"]}>
+                          <span className={plStyles["product-model"]}>
+                            Miror model
+                          </span>
+                          <h4 className={plStyles["product-title"]}>112 D</h4>
+                        </figcaption>
+                      </figure>
+                    </article>
+                  </Link>
+                  <Link href="/test">
+                    <article
+                      className={plStyles["product"]}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <figure className={plStyles["product-details"]}>
+                        <img
+                          src="/images/product-list/2.avif"
+                          className={plStyles["product-image"]}
+                          alt="product image"
+                        />
+                        <figcaption className={plStyles["product-caption"]}>
+                          <span className={plStyles["product-model"]}>
+                            Miror model
+                          </span>
+                          <h4 className={plStyles["product-title"]}>112 D</h4>
+                        </figcaption>
+                      </figure>
+                    </article>
+                  </Link>
+                  <Link href="/test">
+                    <article
+                      className={plStyles["product"]}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <figure className={plStyles["product-details"]}>
+                        <img
+                          src="/images/product-list/3.avif"
+                          className={plStyles["product-image"]}
+                          alt="product image"
+                        />
+                        <figcaption className={plStyles["product-caption"]}>
+                          <span className={plStyles["product-model"]}>
+                            Miror model
+                          </span>
+                          <h4 className={plStyles["product-title"]}>112 D</h4>
+                        </figcaption>
+                      </figure>
+                    </article>
+                  </Link>
+                  <Link href="/test">
+                    <article
+                      className={plStyles["product"]}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <figure className={plStyles["product-details"]}>
+                        <img
+                          src="/images/product-list/4.avif"
+                          className={plStyles["product-image"]}
+                          alt="product image"
+                        />
+                        <figcaption className={plStyles["product-caption"]}>
+                          <span className={plStyles["product-model"]}>
+                            Miror model
+                          </span>
+                          <h4 className={plStyles["product-title"]}>112 D</h4>
+                        </figcaption>
+                      </figure>
+                    </article>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -536,7 +536,7 @@ export default function Home() {
                         2001 has changed its name and created the Iranian glass
                         technology brand (with the brand name Gilda Glass)
                       </p>
-                      <MoreButton href="/" className={styles["info-button"]}>
+                      <MoreButton href="/category-details" className={styles["info-button"]}>
                         More information
                       </MoreButton>
                     </div>
@@ -552,7 +552,7 @@ export default function Home() {
                         className={`${styles["item-title"]} ${styles["item-title-bordered"]} item-title-bordered d-mobile-none item-title-2 horizontal-move`}
                         data-speed={width <= 768 ? 0 : -2}
                       >
-                        Smart Monitor Mirors
+                        Touch Panel Glass
                       </h3>
                       <div
                         className={`${styles["item-image-holder"]} d-mobile-flex image-container`}
@@ -570,7 +570,7 @@ export default function Home() {
                         className={`${styles["item-title"]} item-title-2 horizontal-move`}
                         data-speed={width <= 768 ? 0 : -2}
                       >
-                        Smart Monitor Mirors
+                        Touch Panel Glass
                       </h3>
                       <p className={styles["item-description"]}>
                         Iran Glass Technology with more than 40 years of
@@ -579,7 +579,48 @@ export default function Home() {
                         2001 has changed its name and created the Iranian glass
                         technology brand (with the brand name Gilda Glass)
                       </p>
-                      <MoreButton href="/" className={styles["info-button"]}>
+                      <MoreButton href="/category-details-2" className={styles["info-button"]}>
+                        More information
+                      </MoreButton>
+                    </div>
+                  </article>
+
+                  <article
+                    className={`row ${styles["work-item"]} ${styles["typical-item"]}`}
+                  >
+                    <div className={`${styles["col"]} ${styles["image-col"]}`}>
+                      <h3
+                        className={`${styles["item-title"]} ${styles["item-title-bordered"]} d-mobile-none item-title horizontal-move`}
+                        data-speed={width <= 768 ? 0 : 2}
+                      >
+                        Other Glass
+                      </h3>
+                      <div
+                        className={`${styles["item-image-holder"]} d-mobile-flex image-container`}
+                      >
+                        <div className="reveal-cover"></div>
+                        <img
+                          className={`${styles["item-image"]} reveal-image`}
+                          src="/images/home/work-1.avif"
+                          alt="work 1"
+                        />
+                      </div>
+                    </div>
+                    <div className={`${styles["col"]}`}>
+                      <h3
+                        className={`${styles["item-title"]} item-title horizontal-move`}
+                        data-speed={width <= 768 ? 0 : 2}
+                      >
+                        Other Glass
+                      </h3>
+                      <p className={styles["item-description"]}>
+                        Iran Glass Technology with more than 40 years of
+                        experience and with the aim of meeting the needs of
+                        customers and improving the quality of products since
+                        2001 has changed its name and created the Iranian glass
+                        technology brand (with the brand name Gilda Glass)
+                      </p>
+                      <MoreButton href="/category-details-3" className={styles["info-button"]}>
                         More information
                       </MoreButton>
                     </div>

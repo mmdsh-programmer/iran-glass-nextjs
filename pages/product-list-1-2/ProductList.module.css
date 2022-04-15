@@ -1,0 +1,218 @@
+.hero {
+  width: 100%;
+  background: url("/images/category/product-image.avif") no-repeat bottom/cover;
+  position: relative;
+}
+
+.hero .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(38, 50, 56, 0.4);
+  padding-top: 545px;
+  padding-bottom: 31px;
+  z-index: 1;
+}
+
+.hero .container {
+  padding-top: 545px;
+  padding-bottom: 31px;
+}
+
+.hero .hero-context {
+  margin-left: min(85px, 4.43vw);
+  position: relative;
+  z-index: 2;
+}
+
+.hero .hero-title {
+  font: clamp(68px, 5.1vw, 98px) SaolDisplay, sans-serif, Helvetica, Arial;
+  color: var(--white);
+}
+
+.hero .hero-subtitle {
+  font: clamp(35px, 2.3vw, 44px) NittiGrotesk-Light, sans-serif, Helvetica,
+    Arial;
+  color: var(--white);
+  position: relative;
+  padding-left: 85px;
+}
+
+.hero .hero-subtitle::before {
+  content: "";
+  width: 70px;
+  height: 1px;
+  background-color: var(--white);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.product-description-container {
+  margin-top: 247px;
+}
+
+.product-description-container .description-text {
+  font: clamp(28px, 1.77vw, 34px) / 1.15 NittiGrotesk-Light, sans-serif,
+    Helvetica, Arial;
+  color: #263238;
+  max-width: 1210px;
+  margin-left: auto;
+  margin-right: 85px;
+  position: relative;
+  z-index: 2;
+}
+
+.product-description-container .description-title {
+  font: clamp(158px, 15vw, 288px) SaolDisplay, sans-serif, Helvetica, Arial;
+  color: #a0a0a2;
+  transform: translateY(max(-125px, -6.51vw)) translateX(min(28.65vw, 550px));
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.product-list {
+  margin-bottom: 550px;
+}
+
+.product-list .product {
+  width: clamp(420px, 28.64vw, 550px);
+  height: 100%;
+}
+
+.product .product-details {
+  width: 100%;
+  height: 100%;
+}
+
+.product .product-details .product-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product .product-details .product-caption {
+  margin-top: 20px;
+  padding-left: 30px;
+}
+
+.product .product-details .product-caption .product-model {
+  font: 500 20px NittiGrotesk;
+  color: rgba(38, 50, 56, 0.4);
+  text-transform: uppercase;
+}
+
+.product .product-details .product-caption .product-title {
+  font: 500 50px NittiGrotesk-Light, sans-serif, Helvetica, Arial;
+  color: #263238;
+  position: relative;
+  padding-left: 55px;
+}
+
+.product .product-details .product-caption .product-title::before {
+  content: "";
+  width: 45px;
+  height: 1px;
+  background-color: #263238;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.product-list .product-list-row {
+  column-gap: clamp(20px, 9.64vw, 185px);
+  row-gap: 50px;
+}
+
+.product-list .product:nth-child(even) {
+  margin-top: 275px;
+}
+
+.product-list .more-products {
+  margin-top: 407px;
+}
+
+.product-list .more-products .more-products-title {
+  font: 500 clamp(28px, 2vw, 38px) NittiGrotesk;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 210px;
+}
+
+.product-list .more-products .more-product-category {
+  font: clamp(48px, 4.6vw, 88px) SaolDisplay, sans-serif, Helvetica, Arial;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 110px;
+  text-decoration: none;
+}
+
+@media (min-width: 961px) and (max-width: 1320px) {
+  .product-description-container .description-text {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 960px) {
+  .container:not(.hero .container) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .product-description-container {
+    margin-top: 71px;
+  }
+
+  .product-description-container .description-text {
+    margin-right: 0;
+    line-height: 1.29;
+  }
+
+  .product-description-container .description-title {
+    transform: translateY(-80px);
+  }
+
+  .product-list .product-list-row {
+    row-gap: 80px;
+  }
+
+  .product-list .product:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .product-list .more-products {
+    margin-top: 200px;
+  }
+
+  .product-list .more-products .more-products-title {
+    margin-bottom: 120px;
+  }
+
+  .product-list .more-products .more-product-category {
+    margin-bottom: 80px;
+  }
+
+  .product-list {
+    margin-bottom: 350px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero .hero-title {
+    font-size: 60px;
+  }
+
+  .hero .hero-subtitle {
+    font-size: 30px;
+  }
+
+  .product-list .more-products .more-product-category {
+    font-size: 41px;
+  }
+}

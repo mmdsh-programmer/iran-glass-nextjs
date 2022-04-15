@@ -4,7 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import dynamic from "next/dynamic";
 import Home from "./index";
 import CategoryDetails from "./category-details";
-import ProductList from "./product-list";
+import ProductList from "./product-list-1-1";
 import About from "./about";
 import Contact from "./contact";
 import NotFound from "./404";
