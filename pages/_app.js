@@ -9,6 +9,10 @@ import About from "./about";
 import Contact from "./contact";
 import NotFound from "./404";
 import { ProductView } from "components/ProductView";
+import CategoryDetails from "./category-details-2";
+import CategoryDetails from "./category-details-3";
+import ProductList from "./product-list-1-2";
+import ProductList from "./product-list-1-3";
 import { useEffect, useMemo } from "react";
 
 const Header = dynamic(() => import("components/Header"));
