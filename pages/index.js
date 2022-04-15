@@ -584,7 +584,6 @@ export default function Home() {
                       </MoreButton>
                     </div>
                   </article>
-
                   <article
                     className={`row ${styles["work-item"]} ${styles["typical-item"]}`}
                   >
