@@ -10,7 +10,7 @@ import { gsap, Power4, Power2 } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import SplitType from "split-type";
 
-export default function CategoryDetails() {
+export default function CategoryDetails3() {
   gsap.registerPlugin(ScrollTrigger);
   const mainTitleRef = useRef();
   const headerSubtitleRef = useRef();

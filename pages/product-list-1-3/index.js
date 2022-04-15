@@ -4,7 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export default function ProductList() {
+export default function ProductList_1_3() {
   return (
     <>
       <Head>
