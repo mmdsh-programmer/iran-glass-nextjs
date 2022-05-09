@@ -24,7 +24,7 @@ export default function ProductList_1_3() {
           <div className={styles["background"]}></div>
           <div className={`${styles["container"]} container`}>
             <div className={styles["hero-context"]}>
-              <h1 className={styles["hero-title"]}>Full-length Mirrors</h1>
+              <h1 className={styles["hero-title"]}>Console Mirrors</h1>
               <h2 className={styles["hero-subtitle"]}>Decorative Mirror</h2>
             </div>
           </div>
@@ -39,7 +39,7 @@ export default function ProductList_1_3() {
               the Iranian glass technology brand (with the brand name Gilda
               Glass)
             </p>
-            <h3 className={styles["description-title"]}>Full-length Mirrors</h3>
+            <h3 className={styles["description-title"]}>Console Mirrors</h3>
           </div>
         </section>
 
@@ -140,7 +140,7 @@ export default function ProductList_1_3() {
 
               <Link href="/product-list-1-2" scroll={false}>
                 <a className={`${styles["more-product-category"]} block`}>
-                  Table & Console Mirrors
+                  Table Mirrors
                 </a>
               </Link>
             </div>

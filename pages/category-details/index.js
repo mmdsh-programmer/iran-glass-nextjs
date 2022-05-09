@@ -131,9 +131,9 @@ export default function CategoryDetails() {
                 className={`${styles["header-subtitle"]} header-subtitle`}
                 ref={headerSubtitleRef}
               >
-                Iran Glass Technology with more than 40 years of experience and
-                with the aim of meeting the needs of customers and improving the
-                quality of products
+                Products that use mirrors in their production enjoy a great
+                variety. Looking more meticulously, you will definitely find
+                them in your home and workplace.
               </p>
             </header>
           </div>
@@ -149,10 +149,11 @@ export default function CategoryDetails() {
             className={`${styles["description"]} banner-description`}
             ref={bannerDescriptionRef}
           >
-            Iran Glass Technology with more than 40 years of experience and with
-            the aim of meeting the needs of customers and improving the quality
-            of products since 2001 has changed its name and created the Iranian
-            glass technology brand (with the brand name Gilda Glass)
+            We are constantly updating and diversifying our products, and we are
+            open to take your ideas into account in our future designs. In this
+            section, a number of our decorative mirror products, as a small part
+            of our capabilities in this field, are introduced. Don’t miss our
+            new designs presented to you here.
           </p>
         </section>
 
@@ -226,7 +227,10 @@ export default function CategoryDetails() {
                   and with the aim of meeting the needs of customers
                 </p>
 
-                <MoreButton href="/product-list-1-1" className={styles["view-products"]}>
+                <MoreButton
+                  href="/product-list-1-1"
+                  className={styles["view-products"]}
+                >
                   View products
                 </MoreButton>
 
@@ -245,7 +249,7 @@ export default function CategoryDetails() {
               <header
                 className={`${styles["catalogue-data-title"]} ml-lg-20 mr-lg-20`}
               >
-                <h3 className={styles["title"]}>Table & Console Mirrors</h3>
+                <h3 className={styles["title"]}>Table Mirrors</h3>
               </header>
 
               <div className="row align-center">
@@ -261,14 +265,17 @@ export default function CategoryDetails() {
                   and with the aim of meeting the needs of customers
                 </p>
 
-                <MoreButton href="/product-list-1-2" className={styles["view-products"]}>
+                <MoreButton
+                  href="/product-list-1-2"
+                  className={styles["view-products"]}
+                >
                   View products
                 </MoreButton>
 
                 <div className={styles["catalogue-data-image"]}>
                   <img
                     className={styles["image"]}
-                    src="/images/category/product-image.avif"
+                    src="/images/table-mirror.jpg"
                     alt="product"
                     title="product image"
                   />
@@ -280,7 +287,7 @@ export default function CategoryDetails() {
               <header
                 className={`${styles["catalogue-data-title"]} ml-lg-20 mr-lg-20`}
               >
-                <h3 className={styles["title"]}>Full-length Mirror</h3>
+                <h3 className={styles["title"]}>Console Mirror</h3>
               </header>
 
               <div className="row align-center">
@@ -296,14 +303,17 @@ export default function CategoryDetails() {
                   and with the aim of meeting the needs of customers
                 </p>
 
-                <MoreButton href="/product-list-1-3" className={styles["view-products"]}>
+                <MoreButton
+                  href="/product-list-1-3"
+                  className={styles["view-products"]}
+                >
                   View products
                 </MoreButton>
 
                 <div className={styles["catalogue-data-image"]}>
                   <img
                     className={styles["image"]}
-                    src="/images/category/product-image.avif"
+                    src="/images/console-mirror.jpg"
                     alt="product"
                     title="product image"
                   />

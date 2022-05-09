@@ -135,13 +135,13 @@ export default function ProductList_1_1() {
               <h5 className={styles["more-products-title"]}>more products</h5>
               <Link href="/product-list-1-2" scroll={false}>
                 <a className={`${styles["more-product-category"]} block`}>
-                  Table & Console Mirrors
+                  Table Mirrors
                 </a>
               </Link>
 
               <Link href="/product-list-1-3" scroll={false}>
                 <a className={`${styles["more-product-category"]} block`}>
-                  Full-length Mirrors
+                  Console Mirrors
                 </a>
               </Link>
             </div>

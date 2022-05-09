@@ -517,8 +517,9 @@ export default function Home() {
                         <div className="reveal-cover"></div>
                         <img
                           className={`${styles["item-image"]} reveal-image`}
-                          src="/images/home/work-1.avif"
+                          src="/images/decorative-mirror.jpg"
                           alt="work 1"
+                          style={{objectPosition : "top center"}}
                         />
                       </div>
                     </div>
@@ -530,13 +531,17 @@ export default function Home() {
                         Decoration Mirors
                       </h3>
                       <p className={styles["item-description"]}>
-                        Iran Glass Technology with more than 40 years of
-                        experience and with the aim of meeting the needs of
-                        customers and improving the quality of products since
-                        2001 has changed its name and created the Iranian glass
-                        technology brand (with the brand name Gilda Glass)
+                        We are constantly updating and diversifying our
+                        products, and we are open to take your ideas into
+                        account in our future designs. In this section, a number
+                        of our decorative mirror products, as a small part of
+                        our capabilities in this field, are introduced. Don’t
+                        miss our new designs presented to you here.
                       </p>
-                      <MoreButton href="/category-details" className={styles["info-button"]}>
+                      <MoreButton
+                        href="/category-details"
+                        className={styles["info-button"]}
+                      >
                         More information
                       </MoreButton>
                     </div>
@@ -552,7 +557,7 @@ export default function Home() {
                         className={`${styles["item-title"]} ${styles["item-title-bordered"]} item-title-bordered d-mobile-none item-title-2 horizontal-move`}
                         data-speed={width <= 768 ? 0 : -2}
                       >
-                        Touch Panel Glass
+                        Glass Touch Panel
                       </h3>
                       <div
                         className={`${styles["item-image-holder"]} d-mobile-flex image-container`}
@@ -560,8 +565,9 @@ export default function Home() {
                         <div className="reveal-cover"></div>
                         <img
                           className={`${styles["item-image"]} reveal-image`}
-                          src="/images/home/work-2.avif"
+                          src="/images/touch-panel.jpg"
                           alt="work 2"
+                          style={{objectPosition : "bottom center"}}
                         />
                       </div>
                     </div>
@@ -570,16 +576,19 @@ export default function Home() {
                         className={`${styles["item-title"]} item-title-2 horizontal-move`}
                         data-speed={width <= 768 ? 0 : -2}
                       >
-                        Touch Panel Glass
+                        Glass Touch Panel
                       </h3>
                       <p className={styles["item-description"]}>
-                        Iran Glass Technology with more than 40 years of
-                        experience and with the aim of meeting the needs of
-                        customers and improving the quality of products since
-                        2001 has changed its name and created the Iranian glass
-                        technology brand (with the brand name Gilda Glass)
+                        In glass industry, expertise, skill, experience, being
+                        up-to-date, and collaborating with the modern world are
+                        among the items required to manufacture high-quality and
+                        state-of-the-art products. Iran Glass Technology has
+                        fully incorporated all this in its production line.
                       </p>
-                      <MoreButton href="/category-details-2" className={styles["info-button"]}>
+                      <MoreButton
+                        href="/category-details-2"
+                        className={styles["info-button"]}
+                      >
                         More information
                       </MoreButton>
                     </div>
@@ -591,8 +600,9 @@ export default function Home() {
                       <h3
                         className={`${styles["item-title"]} ${styles["item-title-bordered"]} d-mobile-none item-title horizontal-move`}
                         data-speed={width <= 768 ? 0 : 2}
+                        style={{fontSize : "clamp(52px, 6.39vw, 148px)"}}
                       >
-                        Other Glass
+                        General style Mirrors
                       </h3>
                       <div
                         className={`${styles["item-image-holder"]} d-mobile-flex image-container`}
@@ -600,7 +610,7 @@ export default function Home() {
                         <div className="reveal-cover"></div>
                         <img
                           className={`${styles["item-image"]} reveal-image`}
-                          src="/images/home/work-1.avif"
+                          src="/images/general-glass.jpg"
                           alt="work 1"
                         />
                       </div>
@@ -609,17 +619,22 @@ export default function Home() {
                       <h3
                         className={`${styles["item-title"]} item-title horizontal-move`}
                         data-speed={width <= 768 ? 0 : 2}
+                        style={{fontSize : "clamp(52px, 6.39vw, 148px)"}}
                       >
-                        Other Glass
+                        General style Mirrors
                       </h3>
                       <p className={styles["item-description"]}>
-                        Iran Glass Technology with more than 40 years of
-                        experience and with the aim of meeting the needs of
-                        customers and improving the quality of products since
-                        2001 has changed its name and created the Iranian glass
-                        technology brand (with the brand name Gilda Glass)
+                        A wide variety of glass and mirror products can be seen
+                        in our products. Our other products, including most of
+                        the glass products used in buildings, interior designs,
+                        and home and industrial appliances, can help you achieve
+                        your goals in choosing the right material? so as to make
+                        your dreams come true.
                       </p>
-                      <MoreButton href="/category-details-3" className={styles["info-button"]}>
+                      <MoreButton
+                        href="/category-details-3"
+                        className={styles["info-button"]}
+                      >
                         More information
                       </MoreButton>
                     </div>

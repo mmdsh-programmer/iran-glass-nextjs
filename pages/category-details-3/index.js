@@ -71,38 +71,9 @@ export default function CategoryDetails3() {
     });
   };
 
-  const catalogueCounterAnimation = () => {
-    const counters = counterHolderRef.current.children;
-    const timeLine = gsap.timeline({
-      scrollTrigger: {
-        trigger: counterHolderRef.current,
-        start: "top center - 30%",
-      },
-    });
-
-    timeLine
-      .to(".counter-separator", {
-        transformOrigin: "% 50%",
-        scaleY: 1,
-        duration: 1,
-        ease: Power2.easeOut,
-      })
-      .to(
-        ".mask-layer",
-        {
-          transformOrigin: "50% 0%",
-          scaleX: 0,
-          duration: 1,
-          ease: Power2.easeOut,
-        },
-        "0.5"
-      );
-  };
-
   useEffect(() => {
     heroAnimation();
     bannerDescriptionAnimation();
-    catalogueCounterAnimation();
   }, []);
 
   return (
@@ -127,22 +98,22 @@ export default function CategoryDetails3() {
                 className={`${styles["header-title"]} main-title`}
                 ref={mainTitleRef}
               >
-                Other Glass
+                General Glasses
               </h1>
               <p
                 className={`${styles["header-subtitle"]} header-subtitle`}
                 ref={headerSubtitleRef}
               >
-                Iran Glass Technology with more than 40 years of experience and
-                with the aim of meeting the needs of customers and improving the
-                quality of products
+                The first and the only Iranian manufacturer of Glass Touch
+                Panels that deploys modern European technological developments
+                to make glass products used in smart buildings.
               </p>
             </header>
           </div>
           <div className={styles["background"]}>
             <img
               className={styles["background-image"]}
-              src="/images/category/hero-image.avif"
+              src="/images/general-glass.jpg"
               alt="hero"
             />
           </div>
@@ -151,63 +122,16 @@ export default function CategoryDetails3() {
             className={`${styles["description"]} banner-description`}
             ref={bannerDescriptionRef}
           >
-            Iran Glass Technology with more than 40 years of experience and with
-            the aim of meeting the needs of customers and improving the quality
-            of products since 2001 has changed its name and created the Iranian
-            glass technology brand (with the brand name Gilda Glass)
+            A wide variety of glass and mirror products can be seen in our
+            products. Our other products, including most of the glass products
+            used in buildings, interior designs, and home and industrial
+            appliances, can help you achieve your goals in choosing the right
+            material???? so as to make your dreams come true
           </p>
         </section>
 
         <section className={styles["catalogue"]}>
           <div className={`container ${styles["container"]}`}>
-            <div
-              className={`row ml-lg-20 mr-lg-20 wrap ${styles["catalogue-counter"]} catalogue-counter`}
-              ref={counterHolderRef}
-            >
-              <div
-                className={`col ${styles["col-4"]} row justify-start align-start`}
-              >
-                <div className="row align-end p-relative">
-                  <div className={`${styles["mask-layer"]} mask-layer`}></div>
-                  <span className={styles["counter-number"]}>48</span>
-                  <span
-                    className={`${styles["counter-separator"]} counter-separator`}
-                  ></span>
-                  <h4 className={`inline-block ${styles["counter-title"]}`}>
-                    Wall mirors
-                  </h4>
-                </div>
-              </div>
-              <div
-                className={`col ${styles["col-4"]} row justify-center align-center`}
-              >
-                <div className="row align-end p-relative">
-                  <div className={`${styles["mask-layer"]} mask-layer`}></div>
-                  <span className={styles["counter-number"]}>6</span>
-                  <span
-                    className={`${styles["counter-separator"]} counter-separator`}
-                  ></span>
-                  <h4 className={`inline-block ${styles["counter-title"]}`}>
-                    Miror tables
-                  </h4>
-                </div>
-              </div>
-              <div
-                className={`col ${styles["col-4"]} row justify-end align-end`}
-              >
-                <div className="row align-end p-relative">
-                  <div className={`${styles["mask-layer"]} mask-layer`}></div>
-                  <span className={styles["counter-number"]}>10</span>
-                  <span
-                    className={`${styles["counter-separator"]} counter-separator`}
-                  ></span>
-                  <h4 className={`inline-block ${styles["counter-title"]}`}>
-                    Miror consuls
-                  </h4>
-                </div>
-              </div>
-            </div>
-
             <div
               className={plStyles["product-list"]}
               style={{ marginBottom: "0px", marginTop: "300px" }}

@@ -127,23 +127,24 @@ export default function CategoryDetails2() {
                 className={`${styles["header-title"]} main-title`}
                 ref={mainTitleRef}
               >
-                Touch Panel Glass
+                Glass Touch Panel
               </h1>
               <p
                 className={`${styles["header-subtitle"]} header-subtitle`}
                 ref={headerSubtitleRef}
               >
-                Iran Glass Technology with more than 40 years of experience and
-                with the aim of meeting the needs of customers and improving the
-                quality of products
+                The first and the only Iranian manufacturer of Glass Touch
+                Panels that deploys modern European technological developments
+                to make glass products used in smart buildings.
               </p>
             </header>
           </div>
           <div className={styles["background"]}>
             <img
               className={styles["background-image"]}
-              src="/images/category/hero-image.avif"
+              src="/images/touch-panel.jpg"
               alt="hero"
+              style={{ objectPosition: "center center" }}
             />
           </div>
 
@@ -151,10 +152,11 @@ export default function CategoryDetails2() {
             className={`${styles["description"]} banner-description`}
             ref={bannerDescriptionRef}
           >
-            Iran Glass Technology with more than 40 years of experience and with
-            the aim of meeting the needs of customers and improving the quality
-            of products since 2001 has changed its name and created the Iranian
-            glass technology brand (with the brand name Gilda Glass)
+            In glass industry, expertise, skill, experience, being up-to-date,
+            and collaborating with the modern world are among the items required
+            to manufacture high-quality and state-of-the-art products. Iran
+            Glass Technology has fully incorporated all this in its production
+            line.
           </p>
         </section>
 
@@ -169,12 +171,12 @@ export default function CategoryDetails2() {
               >
                 <div className="row align-end p-relative">
                   <div className={`${styles["mask-layer"]} mask-layer`}></div>
-                  <span className={styles["counter-number"]}>48</span>
+                  <span className={styles["counter-number"]}>10</span>
                   <span
                     className={`${styles["counter-separator"]} counter-separator`}
                   ></span>
                   <h4 className={`inline-block ${styles["counter-title"]}`}>
-                    Wall mirors
+                    Glass Touch Panels
                   </h4>
                 </div>
               </div>
@@ -183,12 +185,12 @@ export default function CategoryDetails2() {
               >
                 <div className="row align-end p-relative">
                   <div className={`${styles["mask-layer"]} mask-layer`}></div>
-                  <span className={styles["counter-number"]}>6</span>
+                  <span className={styles["counter-number"]}>8</span>
                   <span
                     className={`${styles["counter-separator"]} counter-separator`}
                   ></span>
                   <h4 className={`inline-block ${styles["counter-title"]}`}>
-                    Miror tables
+                    Glass Socket Covers
                   </h4>
                 </div>
               </div>
@@ -197,12 +199,12 @@ export default function CategoryDetails2() {
               >
                 <div className="row align-end p-relative">
                   <div className={`${styles["mask-layer"]} mask-layer`}></div>
-                  <span className={styles["counter-number"]}>10</span>
+                  <span className={styles["counter-number"]}>5</span>
                   <span
                     className={`${styles["counter-separator"]} counter-separator`}
                   ></span>
                   <h4 className={`inline-block ${styles["counter-title"]}`}>
-                    Miror consuls
+                    Glass Control Panels
                   </h4>
                 </div>
               </div>
